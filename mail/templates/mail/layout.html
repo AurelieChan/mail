@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Mail{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'mail/styles.css' %}">
+    <link id="theme" rel="stylesheet" href="{% static 'mail/babelsberg1.css' %}"/>
+
+    {% block script %}
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      {% block body %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

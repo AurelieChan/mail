@@ -1,0 +1,321 @@
+/* =============================================================== Background */
+
+html {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  font-family: "M PLUS Rounded 1c";
+}
+
+/* ===================================================================== Text */
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:visited {
+  color: inherit;
+}
+
+h2, #compose-form, .box, .emailGrid, #readEmailGrid {
+  font-weight: bolder;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+
+/* =============================================================== Top navbar */
+
+.top-navbar {
+  display: grid;
+  grid-template-columns: 200px auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+
+  z-index: 1;
+}
+
+.gargamail {
+  padding-left: 20px;
+  margin: 0;
+  grid-column: 1 / span 2;
+}
+
+.email-address {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.ul-top {
+  list-style-type: none;
+  padding: 5px;
+  margin-top: -2px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.li-top {
+  font-size: 18px;
+  margin: 0 25px;
+  float: center;
+  display: inline-block;
+}
+
+.li-top a {
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.active-navbar a:hover {
+  border-radius: 5px;
+  color: white;
+}
+
+/* ============================================================== Side navbar */
+
+.ul-side {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  width: 15%;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 85px;
+  font-size: 18px;
+}
+
+.li-side {
+  display: block;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  border-radius: 5px;
+}
+
+.themes:hover .dropdown{
+  display: block;
+}
+
+/* ================================================================ page-area */
+
+.page-area {
+  margin-left: 25%;
+  margin-right: 10%;
+  margin-top: 100px;
+}
+
+/* ============================================================ Compose-email */
+#compose-form {
+  animation: cool 1s;
+}
+
+input, textarea, button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin: 8px 0;
+  outline: none;
+  border: none;
+  background-color: #fcfafc;
+  font-family: "M PLUS Rounded 1c";
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 200px;
+  resize: none;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+/* ================================ Error or success message when send e-mail */
+.banner {
+  font-weight: bolder;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin: 8px 0;
+  margin-bottom: 20px;
+}
+
+.anim-compose {
+  animation: smoothbanner 1.5s 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.anim-read {
+  animation: smoothbanner 0.6s;
+}
+
+@keyframes smoothbanner {
+  0% {padding: 0 20px; margin-bottom: 0px; opacity: 0.0;}
+  50% {padding: 12 20px; margin-bottom: 20px; opacity: 0.0;}
+  100% {padding: 12 20px; margin-bottom: 20px; opacity 1.0;}
+}
+
+
+.error {
+  background-color: #FF6666;
+  color: white;
+}
+
+.success {
+  background-color: #99ffcc;
+  color: #330066;
+}
+
+/* =========================================================== login/register */
+
+.form-area {
+  margin-left: 15%;
+  margin-right: 15%;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+.title {
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* ======================================================= Email list display */
+
+.emailGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  animation: cool 1s;
+}
+
+.emailGrid:hover {
+  cursor: pointer;
+}
+
+.timeGrid {
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+.subjectGrid {
+  grid-column: 1 / span 2;
+  border-radius: 5px;
+}
+
+.unreadSubject {
+  background-color: rgb(245, 245, 255, 0.4);
+}
+
+.subject {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  bottom: 7px;
+}
+
+/* ================================================================= Checkbox */
+.check {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  margin-top: 5px;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.check:checked:after {
+  content: '✓';
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  line-height: 1;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 27px;
+  font-weight: bolder;
+}
+
+/* ======================================================= Read email display */
+
+#readEmailGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: cool 1s;
+}
+
+.readEmailSubject, .readEmailBody {
+  padding: 10px;
+  color: #17002e;
+  grid-column: 1 / span 2;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.readEmailBody {
+  height: 340px;
+  font-weight: normal;
+  white-space: pre-wrap;
+}
+
+@keyframes cool {
+  0% {opacity: 0;}
+  100% {opacity 1;}
+}
+
+/* ================================================ Smooth grid disappearance */
+.hide {
+  animation-duration: 0.6s;
+  animation-name: hide;
+  animation-play-state: paused;
+}
+
+@keyframes hide {
+  0% {margin-bottom: 10px; padding: 10px; height: 80px; opacity: 1;}
+  20% {margin-bottom: 0px; padding: 0px; height: 70px; opacity: 0;}
+  100% {margin-bottom: 0px; padding: 0px;height: 0px; opacity: 0;}
+}

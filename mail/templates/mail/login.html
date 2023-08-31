@@ -1,0 +1,34 @@
+{% extends "mail/layout.html" %}
+
+{% block body %}
+
+<div class="form-area">
+
+  <h1 class="gargamail title">GargaMail</h1>
+
+  <h2>Login</h2>
+
+  <div class="box">
+
+    {% if message %}
+      <div>{{ message }}</div>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="post">
+      {% csrf_token %}
+      <div>
+        <input autofocus type="email" name="email" placeholder="Email">
+      </div>
+      <div>
+        <input type="password" name="password" placeholder="Password">
+      </div>
+      <input class="button" type="submit" value="Login">
+    </form>
+
+    Don't have an account? <a class="link" href="{% url 'register' %}">Register here.</a>
+
+  </div>
+
+</div>
+
+{% endblock %}

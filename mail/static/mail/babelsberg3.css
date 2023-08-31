@@ -1,0 +1,62 @@
+html {
+  background-image: url("images/landscape3.jpg");
+}
+
+h2, #compose-form, .box, .emailGrid, #readEmailGrid, .ul-side {
+  color: #d9d9ff;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.top-navbar, .button, .title, .dropdown {
+  background-color: #000000;
+}
+
+.gargamail, .email-address, .button, .dropdown, .active-navbar a {
+  color: #c2c2ff;
+}
+
+.inactive-navbar a {
+  color: #595959;
+  pointer-events: none;
+}
+
+.li-side:hover, .emailGrid:hover, .active-navbar a:hover, .button:hover, .dropdown a:hover {
+  background-color: #9494ff;
+  color: #191919;
+}
+
+textarea, .readEmailSubject, .readEmailBody, input {
+  background-color: rgb(0, 0, 0, 0.6);
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #c2c2ff;
+  color: #FFFFFF;
+}
+
+.link:hover {
+  color: #9c9cff;
+}
+
+.emailGrid, #readEmailGrid {
+  color: #d9d9ff;
+}
+
+.readSubject {
+  background-color: rgb(80, 80, 80, 0.4);
+  color: #f7f7ff;
+}
+
+.unreadSubject, .check:checked:after {
+  background-color: rgb(242, 242, 242, 0.55);
+  color: #000000;
+}
+
+.check {
+  background-color: #d9d9ff;
+  border: none;
+}
+
+.check:hover {
+  background-color: #808080;
+  cursor: pointer;
+}
